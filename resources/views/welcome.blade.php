@@ -1,52 +1,45 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.main')
 
-        <title>Eventos</title>
+@section('title', 'Laravel Events')
 
-        <link rel="stylesheet" href="/css/style.css">
-        <script src="/js/script.js"></script>
-    </head>
-    <body class="antialiased">
-        <h1>Usando Blade</h1>
+@section('content')
+    <h1>Usando Blade</h1>
+    <a href="/produtos">Produtos</a>
+    <a href="/contato">Contato</a>
+    <img src="/img/banner.jpg" alt="">
 
-        <img src="/img/banner.jpg" alt="">
+    @if (2 == 2)
+        <p>A condição é true</p>
+    @endif
 
-        @if (2 == 2)
-            <p>A condição é true</p>
+    <p>Meu nome é {{ $nome }}</p>
+
+    @if ($nome == "José")
+        <p>O nome é José</p>
+    @elseif ($nome == "Ronald")
+        <p>Meu nome é {{ $nome }}, tenho {{ $pesIdade }} anos, e estudo {{ $estudo }}</p>
+    @else 
+        <p>Nome não registrado</p>
+    @endif
+
+    @for ($i = 0; $i < count($array); $i++)
+        <p>{{ $array[$i] }} - {{ $i }}</p>
+
+        @if ($i == 2) 
+            <p>O índice é 2.</p>
         @endif
+    @endfor
 
-        <p>Meu nome é {{ $nome }}</p>
+    @foreach ($nomes as $nome)
+        <p>{{ $loop->index }}</p>
+        <p>{{ $nome }}</p>
+    @endforeach
 
-        @if ($nome == "José")
-            <p>O nome é José</p>
-        @elseif ($nome == "Ronald")
-            <p>Meu nome é {{ $nome }}, tenho {{ $pesIdade }} anos, e estudo {{ $estudo }}</p>
-        @else 
-            <p>Nome não registrado</p>
-        @endif
+    @php
+        $nome = "José";
+        echo $nome;
+    @endphp
 
-        @for ($i = 0; $i < count($array); $i++)
-            <p>{{ $array[$i] }} - {{ $i }}</p>
-
-            @if ($i == 2) 
-                <p>O índice é 2.</p>
-            @endif
-        @endfor
-
-        @foreach ($nomes as $nome)
-            <p>{{ $loop->index }}</p>
-            <p>{{ $nome }}</p>
-        @endforeach
-
-        @php
-            $nome = "José";
-            echo $nome;
-        @endphp
-
-        <!-- Comentário no HTML -->
-        {{-- Comentário no Blade --}}
-    </body>
-</html>
+    <!-- Comentário no HTML -->
+    {{-- Comentário no Blade --}}
+@endsection
