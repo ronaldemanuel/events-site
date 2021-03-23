@@ -5,7 +5,7 @@
 @section('content')
     <h1>Página de produtos</h1>
     @if ($busca != "")
-        <p>Está buscando por {{ $busca }}</p>
+        <p>Está buscando por <b>{{ $busca }}</b></p>
     @endif
     <a href="/">Voltar</a>
 @endsection

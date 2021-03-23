@@ -14,20 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ProductController;
 
 Route::get('/', [EventController::class, 'index']);
 Route::get('/evento/criar', [EventController::class, 'create']);
 
-Route::get('/contato', function () {
-    return view('contact');
-});
+Route::get('/contato', [ContactController::class, 'index']);
 
-Route::get('/produtos', function () {
-    $busca = request('search');
+Route::get('/produtos', [ProductController::class, 'index']);
 
-    return view('products', ['busca' => $busca]);
-});
-
-Route::get('/produtos_teste/{id?}', function ($id = null) {
+Route::get('/produtos/{id?}', function ($id = null){
     return view('product', ['id' => $id]);
 });
