@@ -3,11 +3,16 @@
 @section('title', 'Laravel Events')
 
 @section('content')
-    <h1>Usando Blade</h1>
-    <a href="/produtos">Produtos</a>
-    <a href="/contato">Contato</a>
-    <img class="main-banner" src="/img/banner.jpg" alt="">
-
-    <!-- Comentário no HTML -->
-    {{-- Comentário no Blade --}}
+    @foreach($events as $event)
+        <h2>{{ $event->title }}</h2>
+        <p>{{ $event->description }}</p>
+        <p>
+            <b>Local: </b>{{ $event->city }} <br>
+            @if ($event->private == 0) 
+                <b>PRIVADO</b>
+            @else
+            <b>LIVRE</b>
+            @endif
+        </p>
+    @endforeach
 @endsection
