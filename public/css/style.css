@@ -32,6 +32,26 @@ header {
     border-color: #c28008;
 }
 
+.true-msg {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    width: 100%;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 10px;
+}
+
+.false-msg {
+    background-color: #ffc6c6;
+    color: #a30707;
+    border: 1px solid #ffa3a3;
+    width: 100%;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 10px;
+}
+
 /* navbar */
 #navbar img {
     width: 40px;
