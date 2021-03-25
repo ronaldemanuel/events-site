@@ -89,11 +89,13 @@ header {
 
 #cards-container {
     display: flex;
+    flex-wrap: wrap;
 }
 
 #events-container .card{
     flex: 1 1 0;
     max-width: 25%;
+    min-width: 250px;
     border-radius: 10px;
     padding: 0;
     margin: 5px;
@@ -120,6 +122,21 @@ header {
 .card-participants {
     color: #757575;
     font-size: 14px;
+}
+
+/* Event creat page */
+#event-create-container {
+    padding: 30px;
+}
+
+#event-create-container label {
+    font-weight: bold;
+}
+
+#event-create-container input,
+#event-create-container select,
+#event-create-container textarea {
+    font-size: 12px;
 }
 
 /* Footer */

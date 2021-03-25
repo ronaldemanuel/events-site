@@ -5,18 +5,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <title>@yield('title')</title>
-        <!-- Fontes do Google -->
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto"rel="stylesheet">
+        <!-- Fonte do Google -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
 
-        <!-- CSS do Bootstrap -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <!-- CSS Bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
         <!-- CSS da aplicação -->
         <link rel="stylesheet" href="/css/style.css">
 
-        <!-- JavaScript -->
-        <script src="/js/script.js"></script>
+        <script src="/js/scripts.js"></script>
     </head>
     <body>
         <header>
@@ -30,7 +28,7 @@
                             <a href="/" class="nav-link">Eventos</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/evento/criar" class="nav-link">Criar Evento</a>
+                            <a href="/eventos/criar" class="nav-link">Criar Evento</a>
                         </li>
                         <li class="nav-item">
                             <a href="/" class="nav-link">Entrar</a>
