@@ -13,11 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-use App\Http\Controllers\EventController;
-use App\Http\Controllers\ContactController;
+use App\Http\Controllers\{EventController, ContactController, SignUpController};
 
 Route::get('/', [EventController::class, 'index']);
 Route::get('/eventos/criar', [EventController::class, 'create']);
 Route::post('/eventos', [EventController::class, 'store']);
 
 Route::get('/contato', [ContactController::class, 'index']);
+
+Route::get('/cadastro', [SignUpController::class, 'index']);

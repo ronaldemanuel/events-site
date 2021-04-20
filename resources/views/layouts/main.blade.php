@@ -13,6 +13,7 @@
 
         <!-- CSS da aplicação -->
         <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/signup.css">
 
         <script src="/js/scripts.js"></script>
     </head>
@@ -34,7 +35,7 @@
                             <a href="/" class="nav-link">Entrar</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/" class="nav-link">Cadastrar</a>
+                            <a href="/cadastro" class="nav-link">Cadastrar</a>
                         </li>
                     </ul>
                 </div>
