@@ -53,5 +53,6 @@
         <footer>
             <p>Laravel Events &copy; Ronald Emanuel</p>
         </footer>
+        <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
     </body>
 </html>
