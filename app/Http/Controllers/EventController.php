@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Event;
+use App\Models\User;
 
 class EventController extends Controller
 {
@@ -48,6 +49,10 @@ class EventController extends Controller
 
             $event->image = $imageName;
         }
+
+        // User ID
+        $user = auth()->user();
+        $event->user_id = $user->id;
         
         $event->save();
 
@@ -58,6 +63,13 @@ class EventController extends Controller
     {
         $event = Event::findOrFail($id);
 
-        return view('events.show', ['event' => $event]);
+        $user = auth()->user();
+        if ($event->user_id == $user->id) {
+            $eventOwner = $user;
+        } else {
+            $eventOwner = User::where('id', '=', $event->user_id)->first()->toArray();
+        }
+
+        return view('events.show', ['event' => $event, 'eventOwner' => $eventOwner]);
     }
 }
