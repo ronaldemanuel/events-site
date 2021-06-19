@@ -219,6 +219,12 @@ header {
     display: inline-block;
 }
 
+/* Edit page */
+.img-preview {
+    width: 200px;
+    margin-top: 20px;
+}
+
 /* Footer */
 footer {
     text-align: center;
